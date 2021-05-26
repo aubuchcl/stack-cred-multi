@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "containers": {
+    "demo": {
+      "name": "demo",
+      "image": {
+        "name": "simplews",
+        "origin": {
+          "type": "docker-file",
+          "details": {
+            "credentials": [
+              {
+                "url": "docker.io",
+                "token": "a0a42609-0453-4f2c-a5d8-fe841cc237b3",
+                "username": "aubuchcl"
+              },
+              {
+                "url": "docker.io",
+                "token": "cc311952-1c0b-4bb5-af63-85e2fb7ad61d",
+                "username": "nickisyourfan"
+              }
+            ],
+            "context_dir": "/",
+            "build_file": "/Dockerfile"
+          }
+        }
+      },
+      "config": {
+        "network": {
+          "public": "disable",
+          "hostname": "demo"
+        },
+        "deploy": {
+          "instances": 1
+        }
+      }
+    }
+  }
+}
+
