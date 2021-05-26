@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "containers": {
+    "demo": {
+      "name": "demo",
+      "image": {
+        "name": "NickTest",
+        "origin": {
+          "type": "docker-file",
+          "details": {
+            "dir": "/",
+            "path": "/Dockerfile"
+          }
+        }
+      },
+      "config": {
+        "network": {
+          "public": "enable",
+          "hostname": "NickTest",
+          "ports": ["80:80"]
+        },
+        "deploy": {
+          "instances": 1
+        }
+      }
+    }
+  }
+}
